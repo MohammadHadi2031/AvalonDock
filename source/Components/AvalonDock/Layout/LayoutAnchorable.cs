@@ -64,6 +64,16 @@ namespace AvalonDock.Layout
 
 		#region Properties
 
+
+		public Visibility DropDownMenuButtonVisibility
+		{
+			get { return (Visibility)GetValue(DropDownMenuButtonVisibilityProperty); }
+			set { SetValue(DropDownMenuButtonVisibilityProperty, value); }
+		}
+
+		public static readonly DependencyProperty DropDownMenuButtonVisibilityProperty =
+			DependencyProperty.Register("DropDownMenuButtonVisibility", typeof(Visibility), typeof(LayoutAnchorable), new PropertyMetadata(Visibility.Visible));
+
 		/// <summary>Gets/sets the width for this anchorable in AutoHide mode.</summary>
 		public double AutoHideWidth
 		{

@@ -1,4 +1,4 @@
-﻿/************************************************************************
+/************************************************************************
    AvalonDock
 
    Copyright (C) 2007-2013 Xceed Software Inc.
@@ -90,6 +90,16 @@ namespace AvalonDock.Controls
 		protected void SetLayoutItem(LayoutItem value) => SetValue(LayoutItemPropertyKey, value);
 
 		#endregion LayoutItem
+
+		public Visibility DropDownMenuButtonVisibility
+		{
+			get { return (Visibility)GetValue(DropDownMenuButtonVisibilityProperty); }
+			set { SetValue(DropDownMenuButtonVisibilityProperty, value); }
+		}
+
+		public static readonly DependencyProperty DropDownMenuButtonVisibilityProperty =
+			DependencyProperty.Register("DropDownMenuButtonVisibility", typeof(Visibility), typeof(AnchorablePaneTitle), new PropertyMetadata(Visibility.Visible));
+
 
 		#region Overrides
 
